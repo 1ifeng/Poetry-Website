@@ -1,0 +1,18 @@
+{ 
+    "_id" : ObjectId("58a11d3525f4561b64cd8ba1"), 
+    "username" : "Ja", 
+    "email" : "qwer", 
+    "password" : "1234"
+}
+{ 
+    "_id" : ObjectId("58a166bad07eec1f9c3c4735"), 
+    "username" : "Jason", 
+    "email" : "372256385@qq.com", 
+    "password" : "123456"
+}
+{ 
+    "_id" : ObjectId("58a16edef57c991ed0227a04"), 
+    "username" : "Carrie", 
+    "email" : "masqli@126.com", 
+    "password" : "123456"
+}
