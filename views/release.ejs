@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/common.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="top-header">
+      <div class="top-container">
+        <div class="site-logo">
+          <a href="/"><img src="/images/site_logo.png" alt=""></a>
+        </div>
+        <% if (!user) { %>
+          <div class="status-area">
+            <a href="/login">登 录</a>
+          </div>
+        <% } else { %>
+          <div class="user-block" user-id="<%= user._id %>" user-name="<%= user.username%>" >
+            <div class="avatar">
+              <img src="/images/thumbnail02.png" alt="">
+              <ul class="dropdown-list ">
+                <li><a href="javascript:">我的主页</a></li>
+                <li><a href="/logout">登出</a></li>
+              </ul>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+    <div class="top-panel">
+      <div class="division">
+        <div class="release-note">
+          <a href="javascript:">发布指南</a>
+        </div>
+      </div>
+      <div class="release-box">
+        <form action="/release" method="POST">
+          <div class="poetry-input">
+            <input name="firstline" type="text" placeholder="第一行">
+            <input name="secondline" type="text" placeholder="第二行">
+            <input name="thirdline" type="text" placeholder="第三行">
+            <button class="submit-btn" id="release">发 布</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="/javascripts/jquery-1.10.2.min.js"></script>
+    <script src="/javascripts/site_js.js"></script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/common.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="top-header"></div>
+    <div class="top-panel">
+      <div class="showmsg">
+        <% if (success) { %>
+          <p class="msg msg-success"><%= success %><a href="/index">返回首页</a></p>
+        <% } else if (error) { %>
+          <p class="msg msg-error"><%= error %></p>
+        <% } %>
+      </div>
+      <div class="welcome-cover">
+        <form action="/login" method="POST">
+          <div class="signup-input">
+            <fieldset class="signup-col">
+              <input name="email" type="text" placeholder="邮箱">
+            </fieldset>
+            <fieldset class="signup-col">
+              <input name="password" type="password" placeholder="密码">
+            </fieldset>
+            <button class="submit-btn" id="signup">登 录</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="/javascripts/jquery-1.10.2.min.js"></script>
+  </body>
+</html>
