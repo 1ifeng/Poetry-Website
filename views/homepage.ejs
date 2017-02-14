@@ -31,18 +31,20 @@
     <div class="top-panel">
       <div class="division">
         <div class="release-note">
-          <a href="javascript:">发布指南</a>
+          <a href="javascript:">个人主页</a>
         </div>
       </div>
-      <div class="release-box">
-        <form action="/release" method="POST">
-          <div class="poetry-input">
-            <input name="firstline" type="text" placeholder="第一行">
-            <input name="secondline" type="text" placeholder="第二行">
-            <input name="thirdline" type="text" placeholder="第三行">
-            <button class="submit-btn" id="release">发 布</button>
+      <div class="container">
+        <div class="profile-brief">
+          <div class="head-portrait" style="background-image: url('<%= user.avatarUrl%>')"></div>
+          <div class="user-name"><%= user.username %></div>
+          <div class="setting-link">
+            <a href="/user/settings">设置</a>
           </div>
-        </form>
+        </div>
+        <div class="user-poetry-list">
+
+        </div>
       </div>
     </div>
     <script src="/javascripts/jquery-1.10.2.min.js"></script>

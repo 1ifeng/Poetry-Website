@@ -31,18 +31,23 @@
     <div class="top-panel">
       <div class="division">
         <div class="release-note">
-          <a href="javascript:">发布指南</a>
+          <a href="javascript:">个人设置</a>
         </div>
       </div>
-      <div class="release-box">
-        <form action="/release" method="POST">
-          <div class="poetry-input">
-            <input name="firstline" type="text" placeholder="第一行">
-            <input name="secondline" type="text" placeholder="第二行">
-            <input name="thirdline" type="text" placeholder="第三行">
-            <button class="submit-btn" id="release">发 布</button>
+      <div class="container">
+        <div class="profile-settings">
+          <h3>个人资料</h3>
+          <div class="settings-cell">
+            <label>头像</label>
+            <img src="/images/default_avatar.svg" alt="">
+            <form class="upload-actions" method='POST' action='/user/upload' enctype='multipart/form-data'>
+              <p class="upload-tips">仅支持 jpg、png 格式大小 5M 以内图片。</p>
+              <!-- <label for="upload-avatar">点击上传</label> -->
+              <input id="upload-avatar" type="file">
+              <input type="submit">
+            </form>
           </div>
-        </form>
+        </div>
       </div>
     </div>
     <script src="/javascripts/jquery-1.10.2.min.js"></script>

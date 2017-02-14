@@ -86,6 +86,7 @@
 
 .top-panel {
   padding-top: 58px;
+  background: #f8f9fa;
 }
 
 .showcase {
@@ -113,6 +114,7 @@
 .contents {
   float: left;
   width: 800px;
+  background: #fff;
 }
 
 .poetry-item {
@@ -367,3 +369,117 @@
   color: #e95464;
 }
 
+/* homepage && settings*/
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.profile-brief {
+  width: 960px;
+  padding: 0 10px;
+}
+
+.head-portrait {
+  display: block;
+  margin: 30px auto 0;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: 50%/cover;
+}
+
+.user-name {
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+}
+
+.setting-link {
+  text-align: center;
+}
+
+.setting-link a {
+  display: inline-block;
+  width: 86px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+  border: 1px solid #333;
+  background: #fff;
+  transition: all .3s;
+}
+
+.setting-link a:hover {
+  background: #f8f9fa;
+  border-color: #000;
+}
+
+.profile-settings h3 {
+  font-size: 18px;
+  border-bottom: 1px solid #f1f1f1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.settings-cell {
+  position: relative;
+  padding: 1em 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.settings-cell:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.settings-cell>label {
+  float: left;
+  /*display: inline-block;*/
+  width: 120px;
+  font-size: 14px;
+  padding: 10px 0 10px 10px;
+}
+
+.settings-cell img {
+  float: left;
+  width: 90px;
+  height: 90px;
+}
+
+.upload-actions {
+  float: left;
+  margin-left: 20px;
+}
+
+.upload-tips {
+  font-size: 12px;
+  color: #909090;
+  margin-top: 10px;
+}
+
+.upload-actions>input[type="file"] {
+  /*display: none;*/
+}
+
+.upload-actions>label {
+  display: inline-block;
+  width: 80px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  background: #0096ff;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.upload-actions>label:hover {
+  background: #0096f0;
+}

@@ -4,7 +4,8 @@ var mongooseTemp = require('mongoose');
 var UserSchema = mongoose.Schema({
   username: String,
   email: String,
-  password: String
+  password: String,
+  avatarUrl: {type: String, default: '/images/default_avatar.svg'}
 }, {
   versionKey: false
 });
