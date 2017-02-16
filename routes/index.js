@@ -7,7 +7,6 @@ var Poetry = require('../model/poetry');
 router.get('/', function(req, res, next) {
   Poetry.find(function(err, poetries) {
     if (err) console.log(err);
-    console.log(poetries);
     res.render('index', {
      title: 'Poetry',
      data: poetries
@@ -18,7 +17,6 @@ router.get('/', function(req, res, next) {
 router.get('/index', function(req, res, next) {
   Poetry.find(function(err, poetries) {
     if (err) console.log(err);
-    console.log(poetries);
     res.render('index', {
      title: 'Poetry',
      data: poetries

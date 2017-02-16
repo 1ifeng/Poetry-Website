@@ -39,12 +39,12 @@
           <h3>个人资料</h3>
           <div class="settings-cell">
             <label>头像</label>
-            <img src="/images/default_avatar.svg" alt="">
-            <form class="upload-actions" method='POST' action='/user/upload' enctype='multipart/form-data'>
-              <p class="upload-tips">仅支持 jpg、png 格式大小 5M 以内图片。</p>
-              <!-- <label for="upload-avatar">点击上传</label> -->
-              <input id="upload-avatar" type="file">
-              <input type="submit">
+            <!-- <img src="<%= user.avatarUrl%>" alt=""> -->
+            <form class="upload-actions" method='POST' action='/upload' enctype='multipart/form-data'>
+              <label for="upload-avatar" style="background-image: url(<%= user.avatarUrl%>);"></label>
+              <p class="upload-tips">点击图片选择图片<br>仅支持 jpg、png 格式大小 5M 以内图片。</p>
+              <input name="avatar" id="upload-avatar" type="file">
+              <input type='submit' value='上 传'/>
             </form>
           </div>
         </div>
