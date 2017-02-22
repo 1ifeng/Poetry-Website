@@ -2,17 +2,27 @@
     "_id" : ObjectId("58a11d3525f4561b64cd8ba1"), 
     "username" : "Ja", 
     "email" : "qwer", 
-    "password" : "1234"
+    "password" : "1234", 
+    "avatarUrl" : "/uploads/avatar-1487232543695.jpg"
 }
 { 
     "_id" : ObjectId("58a166bad07eec1f9c3c4735"), 
     "username" : "Jason", 
     "email" : "372256385@qq.com", 
-    "password" : "123456"
+    "password" : "123456", 
+    "avatarUrl" : "/uploads/avatar-1487232813254.png"
 }
 { 
     "_id" : ObjectId("58a16edef57c991ed0227a04"), 
     "username" : "Carrie", 
     "email" : "masqli@126.com", 
-    "password" : "123456"
+    "password" : "123456", 
+    "avatarUrl" : "/uploads/avatar-1487730038518.JPG"
+}
+{ 
+    "_id" : ObjectId("58a2ba41a7fe531ed8ef4291"), 
+    "username" : "Scott", 
+    "email" : "11@qq.com", 
+    "password" : "123456", 
+    "avatarUrl" : "/uploads/avatar-1487745632946.jpg"
 }

@@ -50,7 +50,7 @@
                   <p><%= poetry.thirdline %></p>
                 </div>
                 <div class="info-row">
-                  <div class="user-avatar-small" style="background-image: url('/images/thumbnail02.png');"></div>
+                  <div class="user-avatar-small" auhtor-id="<%= poetry.userid %>" style="background-image: url(<%= poetry.userAvatarUrl %>);"></div>
                   <p class="create-time"><%= poetry.createtime.toLocaleDateString() %></p>
                   <div class="cover-stat">
                     <span class="stat-discuss"><%= poetry.discuss %></span>

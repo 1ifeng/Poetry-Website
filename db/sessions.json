@@ -1,10 +1,5 @@
 { 
-    "_id" : "FZbcd8nMf8V6eyiYaPdgeLpTzBtv6Ori", 
-    "session" : "{\"cookie\":{\"originalMaxAge\":3599999,\"expires\":\"2017-02-13T10:52:15.108Z\",\"httpOnly\":true,\"path\":\"/\"},\"flash\":{},\"user\":{\"_id\":\"58a11d3525f4561b64cd8ba1\",\"username\":\"Ja\",\"email\":\"qwer\",\"password\":\"1234\"}}", 
-    "expires" : ISODate("2017-02-13T10:52:15.108+0000")
-}
-{ 
-    "_id" : "77VTxbhnoLvswW04FdKXSwtydBpzJT7c", 
-    "session" : "{\"cookie\":{\"originalMaxAge\":3600000,\"expires\":\"2017-02-13T11:27:11.302Z\",\"httpOnly\":true,\"path\":\"/\"},\"flash\":{},\"user\":{\"_id\":\"58a166bad07eec1f9c3c4735\",\"username\":\"Jason\",\"email\":\"372256385@qq.com\",\"password\":\"123456\"}}", 
-    "expires" : ISODate("2017-02-13T11:27:11.302+0000")
+    "_id" : "ZT0mXR1c_HwBGUVUmQfpjnRxlObneRLZ", 
+    "session" : "{\"cookie\":{\"originalMaxAge\":3600000,\"expires\":\"2017-02-22T11:13:28.504Z\",\"httpOnly\":true,\"path\":\"/\"},\"flash\":{},\"user\":{\"_id\":\"58a11d3525f4561b64cd8ba1\",\"username\":\"Ja\",\"email\":\"qwer\",\"password\":\"1234\",\"avatarUrl\":\"/uploads/avatar-1487232543695.jpg\"}}", 
+    "expires" : ISODate("2017-02-22T11:13:28.504+0000")
 }

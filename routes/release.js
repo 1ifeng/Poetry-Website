@@ -11,9 +11,9 @@ router.post('/release', checkLogin, function(req, res) {
   var _p = {
     userid: req.session.user._id,
     username: req.session.user.username,
-    firstline: req.body.firstline,
-    secondline: req.body.secondline,
-    thirdline: req.body.thirdline
+    firstline: req.body.firstline.trim(),
+    secondline: req.body.secondline.trim(),
+    thirdline: req.body.thirdline.trim()
   };
 
   var poetry = new Poetry(_p);

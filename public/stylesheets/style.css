@@ -3,6 +3,7 @@
   width: 100%;
   height: 58px;
   background: #2ca9e1;
+  z-index: 99;
 }
 
 .top-container {
