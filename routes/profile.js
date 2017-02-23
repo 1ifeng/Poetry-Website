@@ -5,7 +5,16 @@ var upload = require('../middleware/upload');
 var User = require('../model/user');
 
 router.get('/homepage/:userid', checkLogin, function(req, res) {
-  res.render('homepage', {title: '个人主页'});
+  var arr = req.path.split('/homepage/');
+  var userid = arr[1];
+  User.findOne({'_id': userid}, function(err, guest) {
+    if(err) console.log(err);
+    res.render('homepage', {
+      title: '个人主页',
+      guest: guest
+    });
+  });
+
 });
 
 router.get('/user/settings', checkLogin, function(req, res) {

@@ -36,10 +36,14 @@
       </div>
       <div class="container">
         <div class="profile-brief">
-          <div class="head-portrait" style="background-image: url('<%= user.avatarUrl%>')"></div>
-          <div class="user-name"><%= user.username %></div>
+          <div class="head-portrait" style="background-image: url('<%= guest.avatarUrl%>')"></div>
+          <div class="user-name"><%= guest.username %></div>
           <div class="setting-link">
-            <a href="/user/settings">设置</a>
+            <% if (user._id == guest._id) { %>
+              <a href="/user/settings">设置</a>
+            <% } else { %>
+              <a href="javascript:">关注</a>
+            <% } %>
           </div>
         </div>
         <div class="user-poetry-list">
