@@ -7,6 +7,7 @@ var PoetrySchema = mongoose.Schema({
   secondline: String,
   thirdline: String,
   createtime: {type : Date, default: Date.now},
+  ap_users: Array,
   appreciations: {type : Number, default: 0},
   discuss: {type : Number, default: 0},
 }, {

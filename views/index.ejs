@@ -40,7 +40,7 @@
           <div class="contents">
             <% if (data) {
               data.forEach(function(poetry) { %>
-              <div class="poetry-item">
+              <div class="poetry-item" data-poetryid="<%= poetry._id %>">
                 <div class="thumbnail">
                   <img src='/images/thumbnail.png' alt="">
                 </div>
@@ -53,8 +53,16 @@
                   <a href="/homepage/<%= poetry.userid %>" class="user-avatar-small" auhtor-id="<%= poetry.userid %>" style="background-image: url(<%= poetry.userAvatarUrl %>);"></a>
                   <p class="create-time"><%= poetry.createtime.toLocaleDateString() %></p>
                   <div class="cover-stat">
-                    <span class="stat-discuss"><%= poetry.discuss %></span>
-                    <span class="stat-appreciations likes"><%= poetry.appreciations %></span>
+                    <!-- <span class="stat-discuss"><%= poetry.discuss %></span> -->
+                  <% if (user) { %>
+                    <% if ((poetry.ap_users).indexOf(user._id) > -1) { %>
+                      <span class="stat-appreciations likes"><%= poetry.appreciations %></span>
+                    <% } else { %>
+                      <span class="stat-appreciations"><%= poetry.appreciations %></span>
+                    <% } %>
+                  <% } else {%>
+                    <span class="stat-appreciations"><%= poetry.appreciations %></span>
+                  <% } %>
                   </div>
                 </div>
               </div>

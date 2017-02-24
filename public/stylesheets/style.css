@@ -185,7 +185,7 @@
   color: rgba(24, 37, 50, .5);
   background-image: url(img/heart_like.png);
   background-repeat: no-repeat;
-  background-position: 5px -1px;
+  background-position: 5px 0;
   border: 1px solid #f1f1f1;
   cursor: pointer;
   margin-right: -1px;
@@ -193,7 +193,7 @@
 }
 
 .stat-appreciations.likes {
-  background-position: 5px -27px;
+  background-position: 5px -24px;
 }
 
 .stat-discuss {
