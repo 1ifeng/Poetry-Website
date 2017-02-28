@@ -59,22 +59,18 @@
   left: -18px;
   width: 80px;
   text-align: center;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
   border-top: 0;
   border-radius: 4px;
 }
 
 .dropdown-list li {
   background: #fff;
-  transition: background-color .3s;
+  transition: background-color 0.3s;
 }
 
 .dropdown-list li:hover {
   background: #f1f1f1;
-}
-
-.dropdown li+li {
-  border-top: 1px solid #eee;
 }
 
 .dropdown-list li a {
@@ -83,6 +79,10 @@
   height: 34px;
   line-height: 34px;
   color: #666;
+}
+
+.dropdown-list li + li {
+  border-top: 1px solid #eee;
 }
 
 .top-panel {
@@ -168,7 +168,7 @@
   display: inline-block;
   margin-top: 30px;
   margin-right: -28px;
-  color: rgba(24, 37, 50, .5);
+  color: rgba(24, 37, 50, 0.5);
 }
 
 .cover-stat {
@@ -182,7 +182,7 @@
   padding: 0 10px 0 30px;
   height: 24px;
   line-height: 24px;
-  color: rgba(24, 37, 50, .5);
+  color: rgba(24, 37, 50, 0.5);
   background-image: url(img/heart_like.png);
   background-repeat: no-repeat;
   background-position: 5px 0;
@@ -201,7 +201,7 @@
   padding: 0 10px 0 30px;
   height: 24px;
   line-height: 24px;
-  color: rgba(24, 37, 50, .5);
+  color: rgba(24, 37, 50, 0.5);
   background-image: url(img/heart_like.png);
   background-repeat: no-repeat;
   background-position: 5px -1px;
@@ -210,7 +210,6 @@
 }
 
 /* release.ejs */
-
 .division {
   width: 100%;
   background: #f8f9fa;
@@ -226,8 +225,8 @@
   display: inline-block;
   padding: 14px 19px;
   border-bottom: 2px solid transparent;
-  color: rgba(24, 37, 50, .5);
-  transition: border-bottom .3s, color .3s;
+  color: rgba(24, 37, 50, 0.5);
+  transition: all 0.3s;
 }
 
 .release-note a:hover {
@@ -256,15 +255,13 @@
   outline: none;
 }
 
-.poetry-input input[type='text']:hover,
-.poetry-input input[type='text']:focus {
+.poetry-input input[type='text']:hover, .poetry-input input[type='text']:focus {
   border-color: #007fff;
 }
 
 /*.poetry-input input[type='file'] {
 
 }*/
-
 .submit-btn {
   width: 220px;
   height: 40px;
@@ -277,7 +274,7 @@
   border-radius: 3px;
   outline: none;
   cursor: pointer;
-  transition: background .3s;
+  transition: background 0.3s;
 }
 
 .submit-btn:hover {
@@ -285,7 +282,6 @@
 }
 
 /* signup && login */
-
 .showmsg {
   width: 960px;
   margin: 20px auto 0;
@@ -336,7 +332,7 @@
 }
 
 .signup-col input[type='text'],
-.signup-col input[type='password']{
+.signup-col input[type='password'] {
   width: 320px;
   height: 40px;
   line-height: 40px;
@@ -345,11 +341,10 @@
   border: 1px solid #ddd;
   border-radius: 2px;
   outline: none;
-  transition: border .3s;
+  transition: border 0.3s;
 }
 
-.signup-col input[type='text']:hover,
-.signup-col input[type='text']:focus,
+.signup-col input[type='text']:hover, .signup-col input[type='text']:focus,
 .signup-col input[type='password']:hover,
 .signup-col input[type='password']:focus {
   border-color: #007fff;
@@ -359,8 +354,7 @@
   border: 1px solid #e95464;
 }
 
-.signup-col input.error-input:hover,
-.signup-col input.error-input:focus {
+.signup-col input.error-input:hover, .signup-col input.error-input:focus {
   border: 1px solid #e95464;
 }
 
@@ -371,7 +365,6 @@
 }
 
 /* homepage && settings*/
-
 .container {
   width: 960px;
   margin: 0 auto;
@@ -411,7 +404,7 @@
   color: #000;
   border: 1px solid #333;
   background: #fff;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .setting-link a:hover {
@@ -438,7 +431,7 @@
   clear: both;
 }
 
-.settings-cell>label {
+.settings-cell > label {
   float: left;
   width: 120px;
   font-size: 14px;
@@ -457,26 +450,18 @@
   margin-left: 20px;
 }
 
-.upload-tips {
-  float: left;
-  font-size: 12px;
-  color: #909090;
-  margin-top: 15px;
-  margin-left: 10px;
-}
-
-.upload-actions>label {
+.upload-actions > label {
   float: left;
   width: 90px;
   height: 90px;
   background-size: 100%;
 }
 
-.upload-actions>input[type="file"] {
+.upload-actions > input[type="file"] {
   display: none;
 }
 
-.upload-actions>input[type="submit"] {
+.upload-actions > input[type="submit"] {
   float: left;
   width: 80px;
   height: 28px;
@@ -493,7 +478,14 @@
   outline: none;
 }
 
-.upload-actions>input[type="submit"]:hover {
+.upload-actions > input[type="submit"]:hover {
   background: #0096f0;
 }
 
+.upload-tips {
+  float: left;
+  font-size: 12px;
+  color: #909090;
+  margin-top: 15px;
+  margin-left: 10px;
+}
