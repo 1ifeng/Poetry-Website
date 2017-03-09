@@ -56,9 +56,9 @@
                     <!-- <span class="stat-discuss"><%= poetry.discuss %></span> -->
                   <% if (user) { %>
                     <% if ((poetry.ap_users).indexOf(user._id) > -1) { %>
-                      <span class="stat-appreciations likes"><%= poetry.appreciations %></span>
+                      <span class="stat-appreciations likes" name="isLogin"><%= poetry.appreciations %></span>
                     <% } else { %>
-                      <span class="stat-appreciations"><%= poetry.appreciations %></span>
+                      <span class="stat-appreciations" name="isLogin"><%= poetry.appreciations %></span>
                     <% } %>
                   <% } else {%>
                     <span class="stat-appreciations"><%= poetry.appreciations %></span>

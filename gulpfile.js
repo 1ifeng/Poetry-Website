@@ -16,7 +16,7 @@ gulp.task('css', function() {
 })
 
 gulp.task('autocss', function() {
-  gulp.watch('public/sass/*.scss', ['css']);
+  gulp.watch('public/src/css/*.scss', ['css']);
 })
 
 // 压缩js

@@ -4,27 +4,31 @@ $(function() {
   });
   // 点赞功能 ajax提交
   $('.stat-appreciations').on('click', function() {
-    var poetryId = $(this).parents('.poetry-item').attr('data-poetryid');
-    var likesNum = Number($(this).text());
-    var inc;
-    if ($(this).hasClass('likes')) {
-      $(this).removeClass('likes');
-      inc = -1;
-      likesNum -= 1;
-      $(this).text(likesNum);
+    // 判断是否登录 待优化
+    if ($(this).attr('name') == 'isLogin') {
+      var poetryId = $(this).parents('.poetry-item').attr('data-poetryid');
+      var likesNum = Number($(this).text());
+      var inc;
+      if ($(this).hasClass('likes')) {
+        $(this).removeClass('likes');
+        inc = -1;
+        likesNum -= 1;
+        $(this).text(likesNum);
+      } else {
+        $(this).addClass('likes');
+        inc = 1;
+        likesNum += 1;
+        $(this).text(likesNum);
+      }
+      var info = {
+        poetryId: poetryId,
+        incNum: inc
+      };
+      sendLikes(info);
     } else {
-      $(this).addClass('likes');
-      inc = 1;
-      likesNum += 1;
-      $(this).text(likesNum);
+      alert('请先登录！');
     }
-    var info = {
-      poetryId: poetryId,
-      incNum: inc
-    };
-    sendLikes(info);
   });
-
   function sendLikes(data) {
     $.ajax({
       url: '/poetry/likes',

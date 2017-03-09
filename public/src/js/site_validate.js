@@ -60,6 +60,39 @@ $(function() {
       return false;
     }
   });
+
+  // 修改密码
+  var $curPwd = $('#currentPassword'),
+      $newPwd = $('#newPassword'),
+      $reNewPwd = $('#reNewPassword'),
+      $parent = $('#changePassword').parent();
+  $('#changePassword').click(function() {
+    if ($curPwd.val().trim() === '') {
+      $parent.append('<p class="changeP-error">当前密码不能为空</p>');
+      setTimeout(function() {
+        $parent.find('p').fadeOut('slow', function() {
+          $(this).remove();
+        });
+      }, 1500);
+      return false;
+    } else if($newPwd.val().trim().length < 6) {
+      $parent.append('<p class="changeP-error">请设置6位及6位数以上的密码</p>');
+      setTimeout(function() {
+        $parent.find('p').fadeOut('slow', function() {
+          $(this).remove();
+        });
+      }, 1500);
+      return false;
+    } else if ($newPwd.val().trim() !== $reNewPwd.val().trim()) {
+      $parent.append('<p class="changeP-error">两次输入的密码不一致</p>');
+      setTimeout(function() {
+        $parent.find('p').fadeOut('slow', function() {
+          $(this).remove();
+        });
+      }, 1500);
+      return false;
+    }
+  });
 });
 
 

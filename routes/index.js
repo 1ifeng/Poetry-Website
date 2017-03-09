@@ -126,7 +126,7 @@ router.post('/poetry/likes', checkLogin, function(req, res, next) {
     });
   }
   console.log(poetryId, incNum, ap_userId);
-  res.json({msg: 'ok>>>>'});
+  res.send({msg: 'fav_action_post_ok'});
 });
 
 module.exports = router;

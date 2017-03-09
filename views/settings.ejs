@@ -39,12 +39,43 @@
           <h3>个人资料</h3>
           <div class="settings-cell">
             <label>头像</label>
-            <!-- <img src="<%= user.avatarUrl%>" alt=""> -->
             <form class="upload-actions" method='POST' action='/upload' enctype='multipart/form-data'>
               <label id="show-avatar" for="upload-avatar" style="background-image: url(<%= user.avatarUrl%>);"></label>
               <p class="upload-tips">点击图片选择图片<br>仅支持 jpg、png 格式大小 5M 以内图片。</p>
               <input name="avatar" id="upload-avatar" type="file" onchange="showImage()">
               <input type='submit' value='上 传'/>
+              <% if (info) { %>
+              <p class="no-pic-tips"><%= info %></p>
+              <% } %>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="profile-settings">
+          <h3>密码修改</h3>
+          <div class="settings-cell">
+            <form action="/changePassword" method="POST">
+              <div class="col">
+                <label>旧密码</label>
+                <input type="password" id="currentPassword" name="currentPassword" placeholder="输入当前密码">
+              </div>
+              <div class="col">
+                <label>新密码</label>
+                <input type="password" id="newPassword" name="newPassword" placeholder="请设置6位及6位数以上的密码">
+              </div>
+              <div class="col">
+                <label>确认新密码</label>
+                <input type="password" id="reNewPassword" name="reNewPassword" placeholder="确认新密码">
+              </div>
+              <div class="col">
+                <input id="changePassword" type="submit" value="保存修改">
+                <% if (success) { %>
+                  <p class="changeP-success"><%= success %></p>
+                <% } else if (error) { %>
+                  <p class="changeP-error"><%= error %></p>
+                <% } %>
+              </div>
             </form>
           </div>
         </div>
@@ -52,5 +83,6 @@
     </div>
     <script src="/javascripts/jquery-1.10.2.min.js"></script>
     <script src="/javascripts/site_js.js"></script>
+    <script src="/javascripts/site_validate.js"></script>
   </body>
 </html>
