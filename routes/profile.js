@@ -3,6 +3,8 @@ var router = express.Router();
 var checkLogin = require('../middleware/check').checkLogin;
 var upload = require('../middleware/upload');
 var User = require('../model/user');
+var fs = require('fs');
+var path = require('path');
 
 router.get('/homepage/:userid', checkLogin, function(req, res) {
   var arr = req.path.split('/homepage/');
@@ -23,9 +25,20 @@ router.get('/user/settings', checkLogin, function(req, res) {
 
 // 上传头像
 router.post('/upload', upload.single('avatar'), function (req, res, next) {
+  var oldAvatarPath;
+  var userid = req.session.user._id;
+  var avatarPath = (req.file.path).replace(/\\/g, '/').slice(4);
+  // 删除旧头像 待优化
+  User.findOne({_id: userid}, function(err, usr) {
+    oldAvatarPath = usr.avatarUrl;
+    var pathname = path.join(__dirname, '../data' + oldAvatarPath);
+    fs.unlink(pathname, function(err) {
+      if(err) console.log(err);
+      console.log('delete old avatar OK');
+    });
+  });
+  // 更新头像
   if (req.file) {
-    var userid = req.session.user._id;
-    var avatarPath = (req.file.path).replace(/\\/g, '/').slice(4);
     User.update({_id: userid}, {avatarUrl: avatarPath}, function(err, user) {
       if(err) console.log(err);
       console.log('UPDATE OK');
@@ -33,9 +46,6 @@ router.post('/upload', upload.single('avatar'), function (req, res, next) {
     req.session.user.avatarUrl = avatarPath;
     req.session.save();
     res.redirect('/user/settings');
-  } else {
-    req.flash('info', '请选择一张图片');
-    return res.redirect('/user/settings');
   }
 });
 

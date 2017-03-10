@@ -36,6 +36,20 @@ $(function() {
       data: data
     });
   }
+  // 上传图片是否为空
+  var $avatarFile = $('#upload-avatar');
+  var $avatarBtn = $('#upload-avatar-btn');
+  $avatarBtn.click(function() {
+    if (!$avatarFile.val()) {
+      $avatarBtn.parent().append('<p class="no-pic-tips">请选择一张图片</p>');
+      setTimeout(function() {
+        $avatarBtn.parent().find('.no-pic-tips').fadeOut('slow', function() {
+          $(this).remove();
+        });
+      }, 1000);
+      return false;
+    }
+  });
 });
 
 // 头像预览 html5 FileReader()

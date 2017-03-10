@@ -42,11 +42,8 @@
             <form class="upload-actions" method='POST' action='/upload' enctype='multipart/form-data'>
               <label id="show-avatar" for="upload-avatar" style="background-image: url(<%= user.avatarUrl%>);"></label>
               <p class="upload-tips">点击图片选择图片<br>仅支持 jpg、png 格式大小 5M 以内图片。</p>
-              <input name="avatar" id="upload-avatar" type="file" onchange="showImage()">
-              <input type='submit' value='上 传'/>
-              <% if (info) { %>
-              <p class="no-pic-tips"><%= info %></p>
-              <% } %>
+              <input name="avatar" id="upload-avatar" type="file" accept="image/*" onchange="showImage()">
+              <input id="upload-avatar-btn" type='submit' value='上 传'/>
             </form>
           </div>
         </div>
